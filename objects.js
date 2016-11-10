@@ -36,7 +36,7 @@ var stockCar = {
     driver: null,
     passengers: []
 };
-console.log(stockCar);
+// console.log(stockCar);
 
 
 /*
@@ -44,15 +44,31 @@ console.log(stockCar);
 
         Declare a variable named `plainPerson`. Set its value to be an empty object with no properties.
 
-        Next, declare a function named `buildPerson` and then define three parameters. The first parameter will be named `person` and the second will be `nameString` and the third will be `age`. Within this function you will modify the `person` object by:
+        Next, declare a function named `buildPerson` and then define three parameters. The first parameter will be named `person` 
+        and the second will be `nameString` and the third will be `age`. Within this function you will modify the `person` 
+        object by:
             - adding a property called `name` and set its value to be the second parameter.
             - adding a property called `age` and set its value to be the third parameter.
 
         The function will return the first parameter.
 
-        Finally, invoke your new function while passing in the `plainPerson` object and additional agrument values, then store the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just the value at `name`, and just the value at `age`.
+        Finally, invoke your new function while passing in the `plainPerson` object and additional agrument values, then store 
+        the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just 
+        the value at `name`, and just the value at `age`.
  */
 
+var plainPerson = {};
+function buildPerson (person, nameString, age){
+    person.name = nameString;
+    person.age = age;
+return person;
+}
+
+
+var completePerson = buildPerson(plainPerson, "dory", 21);
+// console.log(completePerson);
+// console.log(completePerson.name);
+// console.log(completePerson.age);
 
 /*
     # Display values of objects that are inside an array
@@ -76,6 +92,8 @@ console.log(stockCar);
             =====
             ...
  */
+
+
 
 
 /*
