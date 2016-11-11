@@ -153,28 +153,50 @@ var arrayOfObjects = [
 
 // function printProcessedOrders(orders){
 //     for (i=0; i<orders.length; i++){
-//         console.log(orders[i]);
+//         console.log('=====');
+//         console.log('id: ' + orders[i].id);
+//         console.log('purchase date: ' + orders[i].date);
+//         console.log('purchase total: ' + orders[i].total);
 //     }
 // }
 // printProcessedOrders(arrayOfObjects);
 
-function printProcessedOrders(orders){
-    for (i=0; i<orders.length; i++){
-        console.log(orders[i].date);
-    }
-}
+// function printProcessedOrders(orders){
+//     for (i=0; i<orders.length; i++){
+//         console.log(orders[i].date);
+//     }
+// }
 // printProcessedOrders(arrayOfObjects);
 /*
     # Addition with an object
-        Declare a new variable named sumObj and set it to be a new object with the properties `a`, `b`, and `result`. Properties 'a' and 'b' will be set to a number and result will be 'undefined.'
+        Declare a new variable named sumObj and set it to be a new object with the properties `a`, `b`, and `result`. 
+        Properties 'a' and 'b' will be set to a number and result will be 'undefined.'
 
-        Declare a new function named objectAddition. Declare the first parameter, which will be an object. Within this function, you will access the values stored `a` and `b` of the object being passed in. Add the these values and store the sum to this object's `result` property. This function will return the object.
+        Declare a new function named objectAddition. Declare the first parameter, which will be an object. 
+        Within this function, you will access the values stored `a` and `b` of the object being passed in. 
+        Add the these values and store the sum to this object's `result` property. This function will return the object.
 
-        Invoke your function and pass in your object, store the result to a variable named sumObjResult and use `console.log` to inspect your results.
+        Invoke your function and pass in your object, store the result to a variable named sumObjResult and use `console.log` 
+        to inspect your results.
 
         Go ahead and create some more objects and pass them to this function. Have fun with it.
 */
 
+var sumObj = {
+    a: 7,
+    b: 11,
+    result: undefined   
+};
+
+function objectAddition (thingy){
+    thingy.result = thingy.a + thingy.b;
+    // var sum = thingy.a + thingy.b;
+    // thingy.result = sum;
+    return thingy;
+
+    }
+
+// console.log(objectAddition(sumObj));
 
 /*
     # Print sum function and add as new key-value
