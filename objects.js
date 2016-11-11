@@ -188,19 +188,19 @@ var sumObj = {
     result: undefined   
 };
 
-function objectAddition (thingy){
-    thingy.result = thingy.a + thingy.b;
-    // var sum = thingy.a + thingy.b;
-    // thingy.result = sum;
-    return thingy;
-
-    }
+function objectAddition (myObj){
+    myObj.result = myObj.a + myObj.b;
+    // var sum = myObj.a + myObj.b;
+    // myObj.result = sum;
+    // return myObj;
+// }
 
 // console.log(objectAddition(sumObj));
 
 /*
     # Print sum function and add as new key-value
-        Declare a new function named printObj and a single parameter which will be the object from the challenge just above. Within this function you are to print to the screen a message of the operation performed. For Example:
+        Declare a new function named printObj and a single parameter which will be the object from the challenge just above. 
+        Within this function you are to print to the screen a message of the operation performed. For Example:
 
         // if this object was passed into your function:
         { a: 10, b:67, result: 77 }
@@ -210,27 +210,71 @@ function objectAddition (thingy){
         Before returning this object, add a new property to it named `output` and set it to be the message that was printed out.
 
         Invoke this function and pass in your object. Further test by changing the values of the object being passed in or **create more** objects and invoke your function multiple times.
- */
+//  */
+// dorysObj =  console.log(objectAddition(sumObj));
+
+// function printObj (myObj){
+//     return myObj.a + ' + ' + myObj.b + ' = ' + myObj.result;
+}
+
+// console.log(function printObj(dorysObj)); //why is this not working??
 
 
 /*
     # Putting stuff in `plainBox`
-        Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a FOR loop that adds **10** random number values to the array referenced at the `contents` property of the object being passed in. This function will return the object.
+        Declare a function named putInPlainBox and a single parameter which will be an object. 
+        Within this function, write a FOR loop that adds **10** random number values to the array referenced at the 
+        `contents` property of the object being passed in. This function will return the object.
 
-        Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named plainBoxResult and use `console.log` to inspect your results.
+        Invoke your function and pass in your object (which should be `plainBox`), store the result to a variable named 
+        plainBoxResult and use `console.log` to inspect your results.
  */
+
+function putInPlainBox(myObj){
+    for (i=0; i<11; i++) {
+    myObj.contents.push(Math.floor((Math.random() * 100)) + 1);
+    }
+    return myObj;
+}
+var plainBoxResult = putInPlainBox(plainBox);
+// console.log(plainBoxResult);
 
 
 /*
     # Detecting transmission
-        Declare a function named detectingTransmission and a single parameter which will be an object. Within this function you will check to see if the car has an automatic or manual transmission and print the results on screen.
+        Declare a function named detectingTransmission and a single parameter which will be an object. 
+        Within this function you will check to see if the car has an automatic or manual transmission and 
+        print the results on screen.
 
-        If `automaticTransmission` is true then print a message saying so. Also, provide an appropriate message for when the its false.
+        If `automaticTransmission` is true then print a message saying so. Also, provide an appropriate message for 
+        when the its false.
 
-        Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
+        Invoke your function and pass in your stockCar object, store the result to a variable named 
+        isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+var stockCar = {
+    model: "chevy",
+    year: 2015,
+    automaticTransmission: true,
+    driver: null,
+    passengers: []
+};
+// console.log(stockCar);
 
+function detectingTransmission (myObj){
+    if (myObj.automaticTransmission) {
+        console.log("indeed this car is truly has an automatic transmission!");
+    }
+    else {
+        console.log("no, this car is manual!");
+    }
+    return myObj;
+}
+
+detectingTransmission(stockCar);
+// var isAutomaticTransmission = detectingTransmission(stockCar);
+// console.log(isAutomaticTransmission);
 /*
     # Who's driving this thing?!
         As you may have noticed that the `stockCar` doesn't have a driver!
